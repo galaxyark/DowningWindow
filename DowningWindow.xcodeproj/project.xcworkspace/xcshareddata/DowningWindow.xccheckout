@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>E82FC8D2-9CCD-46A8-AF4C-2CCC9A3AA75B</string>
+	<key>IDESourceControlProjectName</key>
+	<string>DowningWindow</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>1D3A481D-CAE8-49BB-BB58-5896EB1EC868</key>
+		<string>https://github.com/galaxyark/DowningWindow.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>DowningWindow.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>1D3A481D-CAE8-49BB-BB58-5896EB1EC868</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/galaxyark/DowningWindow.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>1D3A481D-CAE8-49BB-BB58-5896EB1EC868</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>1D3A481D-CAE8-49BB-BB58-5896EB1EC868</string>
+			<key>IDESourceControlWCCName</key>
+			<string>DW</string>
+		</dict>
+	</array>
+</dict>
+</plist>
