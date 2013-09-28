@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		076E681917F6690C002E049F /* popup-close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 076E681517F6690C002E049F /* popup-close@2x.png */; };
+		076E681A17F6690C002E049F /* popup-close-highlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 076E681617F6690C002E049F /* popup-close-highlighted@2x.png */; };
+		076E681B17F6690C002E049F /* popup-close.png in Resources */ = {isa = PBXBuildFile; fileRef = 076E681717F6690C002E049F /* popup-close.png */; };
+		076E681C17F6690C002E049F /* popup-close-highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = 076E681817F6690C002E049F /* popup-close-highlighted.png */; };
 		07D8D9E717F525AD00C48383 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D8D9E617F525AD00C48383 /* Foundation.framework */; };
 		07D8D9E917F525AD00C48383 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D8D9E817F525AD00C48383 /* CoreGraphics.framework */; };
 		07D8D9EB17F525AD00C48383 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D8D9EA17F525AD00C48383 /* UIKit.framework */; };
@@ -35,6 +39,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		076E681517F6690C002E049F /* popup-close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "popup-close@2x.png"; path = "Resource/popup-close@2x.png"; sourceTree = "<group>"; };
+		076E681617F6690C002E049F /* popup-close-highlighted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "popup-close-highlighted@2x.png"; path = "Resource/popup-close-highlighted@2x.png"; sourceTree = "<group>"; };
+		076E681717F6690C002E049F /* popup-close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "popup-close.png"; path = "Resource/popup-close.png"; sourceTree = "<group>"; };
+		076E681817F6690C002E049F /* popup-close-highlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "popup-close-highlighted.png"; path = "Resource/popup-close-highlighted.png"; sourceTree = "<group>"; };
 		07D8D9E317F525AD00C48383 /* DowningWindow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DowningWindow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07D8D9E617F525AD00C48383 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		07D8D9E817F525AD00C48383 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -116,6 +124,10 @@
 		07D8D9EC17F525AD00C48383 /* DowningWindow */ = {
 			isa = PBXGroup;
 			children = (
+				076E681517F6690C002E049F /* popup-close@2x.png */,
+				076E681617F6690C002E049F /* popup-close-highlighted@2x.png */,
+				076E681717F6690C002E049F /* popup-close.png */,
+				076E681817F6690C002E049F /* popup-close-highlighted.png */,
 				07D8DA1517F525E300C48383 /* DWViewController.h */,
 				07D8DA1617F525E300C48383 /* DWViewController.m */,
 				07D8DA1817F525FC00C48383 /* DWView.h */,
@@ -235,6 +247,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				076E681A17F6690C002E049F /* popup-close-highlighted@2x.png in Resources */,
+				076E681C17F6690C002E049F /* popup-close-highlighted.png in Resources */,
+				076E681B17F6690C002E049F /* popup-close.png in Resources */,
+				076E681917F6690C002E049F /* popup-close@2x.png in Resources */,
 				07D8D9F117F525AD00C48383 /* InfoPlist.strings in Resources */,
 				07D8D9F917F525AD00C48383 /* Images.xcassets in Resources */,
 			);
@@ -460,6 +476,7 @@
 				07D8DA1117F525AD00C48383 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		07D8DA1217F525AD00C48383 /* Build configuration list for PBXNativeTarget "DowningWindowTests" */ = {
 			isa = XCConfigurationList;
@@ -468,6 +485,7 @@
 				07D8DA1417F525AD00C48383 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
