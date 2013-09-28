@@ -7,6 +7,8 @@
 //
 
 #import "DWDowningWindow.h"
+#import <CoreGraphics/CoreGraphics.h>
+
 #define VALIDTAPRADIOUS 30.0
 
 @interface DWDowningWindow()
@@ -26,23 +28,21 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        self.backgroundColor = [UIColor colorWithWhite:0 alpha:0.5]; // Use self.alpha will influence its subview.
+        self.backgroundColor = [UIColor colorWithWhite:0 alpha:0.0]; // Use self.alpha will influence its subview.
         
         contentView = [[UIView alloc] initWithFrame:CGRectZero];
         contentView.backgroundColor = [UIColor whiteColor];
         contentView.opaque = YES;
+        contentView.layer.cornerRadius = 5.0f;
         
         [self addSubview:contentView];
         
         tapRecognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(tabGestureHandler:)];
-//        tapRecognizer.numberOfTapsRequired = 1;
-//        tapRecognizer.numberOfTouchesRequired = 1;
         tapRecognizer.minimumPressDuration = 0.001;
         [contentView addGestureRecognizer:tapRecognizer];
         
         closeButton = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"popup-close.png"] highlightedImage:[UIImage imageNamed:@"popup-close-highlighted.png"]];
-        [contentView addSubview:closeButton];
-        
+        [contentView addSubview:closeButton];        
     }
     return self;
 }
@@ -58,9 +58,9 @@
     closeButton.center = CGPointMake(0, 0);
 
     [UIView animateWithDuration:0.5f animations:^{
+        self.backgroundColor = [UIColor colorWithWhite:0 alpha:0.5];
         contentView.center = self.center;
     }];
-    
 }
 
 - (void)tabGestureHandler:(UIGestureRecognizer *)recognizer
@@ -81,7 +81,8 @@
 - (void)leave
 {
     [UIView animateWithDuration:0.5f animations:^{
-        contentView.center = CGPointMake(contentView.center.x, self.frame.origin.y);
+        contentView.center = CGPointMake(contentView.center.x, self.frame.origin.y - contentView.frame.size.height/2);
+        self.alpha = 0.0f;
     } completion:^(BOOL finished) {
         [self removeFromSuperview];
     }];

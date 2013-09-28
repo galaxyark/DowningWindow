@@ -11,6 +11,7 @@
 		076E681A17F6690C002E049F /* popup-close-highlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 076E681617F6690C002E049F /* popup-close-highlighted@2x.png */; };
 		076E681B17F6690C002E049F /* popup-close.png in Resources */ = {isa = PBXBuildFile; fileRef = 076E681717F6690C002E049F /* popup-close.png */; };
 		076E681C17F6690C002E049F /* popup-close-highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = 076E681817F6690C002E049F /* popup-close-highlighted.png */; };
+		076E681F17F67F8D002E049F /* DWMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 076E681E17F67F8D002E049F /* DWMenuView.m */; };
 		07D8D9E717F525AD00C48383 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D8D9E617F525AD00C48383 /* Foundation.framework */; };
 		07D8D9E917F525AD00C48383 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D8D9E817F525AD00C48383 /* CoreGraphics.framework */; };
 		07D8D9EB17F525AD00C48383 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D8D9EA17F525AD00C48383 /* UIKit.framework */; };
@@ -43,6 +44,8 @@
 		076E681617F6690C002E049F /* popup-close-highlighted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "popup-close-highlighted@2x.png"; path = "Resource/popup-close-highlighted@2x.png"; sourceTree = "<group>"; };
 		076E681717F6690C002E049F /* popup-close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "popup-close.png"; path = "Resource/popup-close.png"; sourceTree = "<group>"; };
 		076E681817F6690C002E049F /* popup-close-highlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "popup-close-highlighted.png"; path = "Resource/popup-close-highlighted.png"; sourceTree = "<group>"; };
+		076E681D17F67F8D002E049F /* DWMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWMenuView.h; sourceTree = "<group>"; };
+		076E681E17F67F8D002E049F /* DWMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWMenuView.m; sourceTree = "<group>"; };
 		07D8D9E317F525AD00C48383 /* DowningWindow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DowningWindow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07D8D9E617F525AD00C48383 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		07D8D9E817F525AD00C48383 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -136,6 +139,8 @@
 				07D8DA1C17F52DBB00C48383 /* DWDowningWindow.m */,
 				07D8D9F517F525AD00C48383 /* DWAppDelegate.h */,
 				07D8D9F617F525AD00C48383 /* DWAppDelegate.m */,
+				076E681D17F67F8D002E049F /* DWMenuView.h */,
+				076E681E17F67F8D002E049F /* DWMenuView.m */,
 				07D8D9F817F525AD00C48383 /* Images.xcassets */,
 				07D8D9ED17F525AD00C48383 /* Supporting Files */,
 			);
@@ -271,6 +276,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				076E681F17F67F8D002E049F /* DWMenuView.m in Sources */,
 				07D8D9F317F525AD00C48383 /* main.m in Sources */,
 				07D8DA1D17F52DBB00C48383 /* DWDowningWindow.m in Sources */,
 				07D8DA1A17F525FC00C48383 /* DWView.m in Sources */,
