@@ -21,6 +21,7 @@
 @implementation DWDowningWindow{
     UIView *contentView;
     UILongPressGestureRecognizer *tapRecognizer;
+    UITapGestureRecognizer *backgroundTapRecognizer;
     UIImageView *closeButton;
 }
 
@@ -29,6 +30,10 @@
     self = [super initWithFrame:frame];
     if (self) {
         self.backgroundColor = [UIColor colorWithWhite:0 alpha:0.0]; // Use self.alpha will influence its subview.
+        backgroundTapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(leave)];
+        backgroundTapRecognizer.numberOfTouchesRequired = 1;
+        backgroundTapRecognizer.numberOfTapsRequired = 1;
+        [self addGestureRecognizer:backgroundTapRecognizer];
         
         contentView = [[UIView alloc] initWithFrame:CGRectZero];
         contentView.backgroundColor = [UIColor whiteColor];
@@ -47,19 +52,26 @@
     return self;
 }
 
-
 - (void)layoutSubviews
 {
     contentView.frame = CGRectMake(self.center.x - 100,0, 200, 150);
     
-//    self.animator = [[UIDynamicAnimator alloc] initWithReferenceView:self];
-//    self.gravity = [[UIGravityBehavior alloc] initWithItems:@[contentView]];
-//    [self.animator addBehavior:self.gravity];
+    self.animator = [[UIDynamicAnimator alloc] initWithReferenceView:self];
+    self.gravity = [[UIGravityBehavior alloc] initWithItems:@[contentView]];
+    [self.animator addBehavior:self.gravity];
+    
+    UICollisionBehavior *collision = [[UICollisionBehavior alloc] initWithItems:@[contentView]];
+    [_animator addBehavior:collision];
+    
+    float boundary = self.frame.size.height/2 + contentView.frame.size.height/2;
+    CGPoint startPoint = CGPointMake(0.0, boundary);
+    CGPoint endPoint = CGPointMake(self.frame.size.width, boundary);
+    [collision addBoundaryWithIdentifier:@1 fromPoint:startPoint toPoint:endPoint];
+    
     closeButton.center = CGPointMake(0, 0);
 
     [UIView animateWithDuration:0.5f animations:^{
         self.backgroundColor = [UIColor colorWithWhite:0 alpha:0.5];
-        contentView.center = self.center;
     }];
 }
 

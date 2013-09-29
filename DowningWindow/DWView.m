@@ -69,6 +69,11 @@
             self.coverView.backgroundColor = [UIColor colorWithWhite:0 alpha:0];
         }
         
+        UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(removeMenuWithGesture:)];
+        tapGestureRecognizer.numberOfTapsRequired = 1;
+        tapGestureRecognizer.numberOfTouchesRequired = 1;
+        [self.coverView addGestureRecognizer:tapGestureRecognizer];
+        
         [self addSubview:self.coverView];
         [self addSubview:self.menu];
         
@@ -82,16 +87,25 @@
                 self.isMenuUp = YES;
             }];
         }];
-    }else{
-        [UIView animateWithDuration:0.5f animations:^{
-            self.coverView.backgroundColor = [UIColor colorWithWhite:0 alpha:0];
-            self.menu.center = CGPointMake(self.menu.center.x, self.menu.center.y + self.frame.size.height - 140);
-        } completion:^(BOOL finished) {
-            [self.coverView removeFromSuperview];
-            [self.menu removeFromSuperview];
-            self.isMenuUp = NO;
-        }];
     }
+}
+
+- (void)removeMenuWithGesture:(UILongPressGestureRecognizer *)gestureRecoginzer
+{
+    [self removeMenu];
+}
+
+
+- (void)removeMenu
+{
+    [UIView animateWithDuration:0.5f animations:^{
+        self.coverView.backgroundColor = [UIColor colorWithWhite:0 alpha:0];
+        self.menu.center = CGPointMake(self.menu.center.x, self.menu.center.y + self.menu.frame.size.height-15);
+    } completion:^(BOOL finished) {
+        [self.coverView removeFromSuperview];
+        [self.menu removeFromSuperview];
+        self.isMenuUp = NO;
+    }];
 }
 
 - (void)layoutSubviews
